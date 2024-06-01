@@ -10,8 +10,7 @@
     border: 2px solid black;
     height: 860px;
     width: 49.5%;
-    resize: both;
-    cursor: grabbing;
+    overflow: hidden;
 }
 
 #preview-container {
