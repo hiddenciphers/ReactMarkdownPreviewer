@@ -37,12 +37,17 @@
     color: black;
 }
 
-.icons {
+.fcc-icons {
     width: 30px;
     border-radius: 60%;
 }
 
-.icons:hover {
+.quit-icons {
+    width: 30px;
+    border-radius: 60%;
+}
+
+.quit-icons:hover {
     width: 33px;
     background-color: #00000028;
 }

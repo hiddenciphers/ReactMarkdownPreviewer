@@ -15,10 +15,10 @@ function Previewer() {
         <div id='editor-container'>
           <div id='editor-top-bar'>
             <div className='top-bar-icons'>
-              <img className='icons' src='./flame_icon.png' alt='freeCodeCamp Flame Icon' />Editor
+              <img className='fcc-icons' src='./flame_icon.png' alt='freeCodeCamp Flame Icon' />Editor
             </div>
             <div>
-              <img className='icons' src='./cross.png' alt='Quit Icon' />
+              <img className='quit-icons' src='./cross.png' alt='Quit Icon' />
             </div>
           </div>
           <textarea
@@ -30,10 +30,10 @@ function Previewer() {
         <div id='preview-container'>
           <div id='preview-top-bar'>
             <div className='top-bar-icons'>
-              <img className='icons' src='./flame_icon.png' alt='freeCodeCamp Flame Icon' />Previewer
+              <img className='fcc-icons' src='./flame_icon.png' alt='freeCodeCamp Flame Icon' />Previewer
             </div>
             <div>
-              <img className='icons' src='./cross.png' alt='Quit Icon' />
+              <img className='quit-icons' src='./cross.png' alt='Quit Icon' />
             </div>
           </div>
           <div
