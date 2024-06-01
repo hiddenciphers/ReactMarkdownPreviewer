@@ -1,0 +1,77 @@
+#container {
+    height: auto;
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    background-color: white;
+}
+
+#editor-container {
+    border: 2px solid black;
+    height: 860px;
+    width: 49.5%;
+    resize: both;
+    cursor: grabbing;
+}
+
+#preview-container {
+    border: 2px solid black;
+    height: 860px;
+    width: 49.5%;
+    overflow: scroll;
+    background-color: #9DB2BF;
+}
+
+.icons {
+    width: 30px;
+}
+
+#editor {
+    width: calc(100% - 3.9px);
+    height: calc(100% - 45px);
+    resize: none;
+    border: none;
+    background-color: #9DB2BF;
+}
+
+#editor-top-bar {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid black;
+    height: 33px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+    background-color: #526D82;
+    
+}
+
+#preview-top-bar {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    height: 33px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+    background-color: #526D82;
+}
+
+.top-bar-icons {
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+}
+
+
+
+
+
