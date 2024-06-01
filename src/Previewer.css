@@ -6,7 +6,7 @@
     justify-content: space-between;
     background-color: #27374D;
     align-items: center;
-    gap: 1.5em;
+    gap: 1.4em;
     margin: auto;
 }
 
@@ -31,7 +31,7 @@
 
 #preview {
     height: calc(100% - 43.5px);
-    padding: 10px 0 0 20px;
+    padding: 10px 20px 0 20px;
     font-family: sans-serif;
     font-size: 15pt;
     color: black;
@@ -101,7 +101,35 @@
     gap: 0.4em;
 }
 
+blockquote {
+  margin: 0;
+  padding: 10px 20px;
+  border-left: 5px solid #ccc;
+  font-style: italic;
+}
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f5f5f5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 
 
