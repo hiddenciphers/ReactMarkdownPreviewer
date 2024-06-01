@@ -1,3 +1,5 @@
+/* Previewer.css */
+
 #container {
     height: auto;
     width: 71em;
@@ -8,51 +10,55 @@
     align-items: center;
     gap: 1.4em;
     margin: auto;
-}
-
-#editor-container {
+  }
+  
+  #editor-container {
     width: 46em;
-    overflow: hidden;
     background-color: #0000006f;
     box-shadow: 5px 5px 10px 6px #0000006f;
-    
-}
-
-#preview-container {
+    flex: 1;
+    transition: height 0.3s ease;
+  }
+  
+  #preview-container {
     border: 2px solid black;
-    max-height: 150em;
+    max-height: auto;
     width: 62em;
     min-height: 15em;
     background-color: #9DB2BF;
     box-shadow: 5px 5px 10px 6px #0000006f;
     padding-bottom: 20px;
     margin-bottom: 30px;
-}
-
-#preview {
+    flex: 1;
+    transition: height 0.3s ease;
+  }
+  
+  .full-height {
+    flex: 1 1 100%;
+  }
+  
+  #preview {
     height: calc(100% - 43.5px);
     padding: 10px 20px 0 20px;
     font-family: sans-serif;
     font-size: 15pt;
     color: black;
-}
-
-.fcc-icons {
+  }
+  
+  .fcc-icons {
     width: 30px;
-    border-radius: 60%;
-}
-
-.quit-icons {
-    width: 30px;
-    border-radius: 60%;
-}
-
-.quit-icons:hover {
-    width: 33px;
-    background-color: #00000028;
-}
-
-#editor {
+  }
+  
+  .toggle-icons {
+    width: 25px;
+    margin-right: 3px;
+  }
+  
+  .quit-icons:hover {
+    width: 28px;
+  }
+  
+  #editor {
     width: calc(100% - 24px);
     resize: vertical;
     border: 2px solid black;
@@ -60,11 +66,11 @@
     min-height: 12em;
     padding: 10px;
     font-size: 14pt;
-}
-
-#editor-top-bar {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    height: calc(100% - 33px); /* Adjust height minus the top bar */
+  }
+  
+  #editor-top-bar {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
     font-weight: bold;
     border: 2px solid black;
     border-bottom: none;
@@ -75,13 +81,10 @@
     align-items: center;
     padding: 3px;
     background-color: #526D82;
-    
-    
-}
-
-#preview-top-bar {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  }
+  
+  #preview-top-bar {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
     font-weight: bold;
     border-bottom: 2px solid black;
     height: 33px;
@@ -92,44 +95,53 @@
     padding: 3px;
     background-color: #526D82;
     box-shadow: 5px 5px 10px 5px #0000006f;
-}
-
-.top-bar-icons {
+  }
+  
+  .top-bar-icons {
     padding-left: 5px;
     display: flex;
     align-items: center;
     gap: 0.4em;
-}
-
-blockquote {
-  margin: 0;
-  padding: 10px 20px;
-  border-left: 5px solid #ccc;
-  font-style: italic;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-table, th, td {
-  border: 1px solid #ddd;
-}
-
-th, td {
-  padding: 8px;
-  text-align: left;
-}
-
-th {
-  background-color: #f5f5f5;
-}
-
-img {
+  }
+  
+  blockquote {
+    margin: 0;
+    padding: 10px 20px;
+    border-left: 5px solid #ccc;
+    font-style: italic;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f5f5f5;
+  }
+  
+  img {
     max-width: 100%;
     height: auto;
     display: block;
   }
+
+  code {
+    background-color: #f5f5f5;
+  }
+
+
+  
+
+
 
 

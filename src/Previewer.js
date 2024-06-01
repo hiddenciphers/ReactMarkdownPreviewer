@@ -15,8 +15,7 @@ marked.setOptions({
 });
 
 function Previewer() {
-  const [markdown, setMarkdown] = useState(`
-# Welcome to my Markdown Previewer!
+  const [markdown, setMarkdown] = useState(`# Welcome to my Markdown Previewer!
 ---  
 ## This is a sub-heading...
 ---
@@ -33,9 +32,12 @@ const handleInputChange = (event) => {
 \`\`\`
 
 You can also make text **bold**... whoa!
+
 Or _italic_.
+
 Or... wait for it... **_both!_**
-And feel free to go crazy ~~crossing stuff out~~.
+
+And feel free to go crazy ~crossing stuff out~.
 
 There's also [links](https://www.freecodecamp.org), and
 > Block Quotes!
@@ -52,15 +54,31 @@ And here. | Okay. | I think we get it.
      - With different indentation levels.
         - That look like this.
 
-1. And there are numbererd lists too.
+1. And there are numbered lists too.
 1. Use just 1s if you want!
 1. But the list goes on...
 
-![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
-`);
+![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)`);
+
+  const [showEditor, setShowEditor] = useState(true);
+  const [showPreview, setShowPreview] = useState(true);
 
   const handleInputChange = (event) => {
     setMarkdown(event.target.value);
+  };
+
+  const toggleEditor = () => {
+    setShowEditor(!showEditor);
+    if (!showEditor) {
+      setShowPreview(true);
+    }
+  };
+
+  const togglePreview = () => {
+    setShowPreview(!showPreview);
+    if (!showPreview) {
+      setShowEditor(true);
+    }
   };
 
   useEffect(() => {
@@ -73,39 +91,45 @@ And here. | Okay. | I think we get it.
   return (
     <div id='Previewer'>
       <div id='container'>
-        <div id='editor-container'>
-          <div id='editor-top-bar'>
-            <div className='top-bar-icons'>
-              <img className='fcc-icons' src='./flame_icon.png' alt='freeCodeCamp Flame Icon' />Editor
+        {showEditor && (
+          <div id='editor-container' className={!showPreview ? 'full-height' : ''}>
+            <div id='editor-top-bar'>
+              <div className='top-bar-icons'>
+                <img className='fcc-icons' src='./flame.png' alt='freeCodeCamp Flame Icon' />Editor
+              </div>
+              <div>
+                <img className='toggle-icons' src={showPreview ? './maximize.png' : './minimize.png'} alt='Toggle Icon' id='close-editor' onClick={togglePreview} />
+              </div>
             </div>
-            <div>
-              <img className='quit-icons' src='./cross.png' alt='Quit Icon' />
-            </div>
+            <textarea
+              id='editor'
+              value={markdown}
+              onChange={handleInputChange}
+            ></textarea>
           </div>
-          <textarea
-            id='editor'
-            value={markdown}
-            onChange={handleInputChange}
-          ></textarea>
-        </div>
-        <div id='preview-container'>
-          <div id='preview-top-bar'>
-            <div className='top-bar-icons'>
-              <img className='fcc-icons' src='./flame_icon.png' alt='freeCodeCamp Flame Icon' />Previewer
+        )}
+        {showPreview && (
+          <div id='preview-container' className={!showEditor ? 'full-height' : ''}>
+            <div id='preview-top-bar'>
+              <div className='top-bar-icons'>
+                <img className='fcc-icons' src='./flame.png' alt='freeCodeCamp Flame Icon' />Previewer
+              </div>
+              <div>
+                <img className='toggle-icons' src={showEditor ? './maximize.png' : './minimize.png'} alt='Toggle Icon' id='close-preview' onClick={toggleEditor} />
+              </div>
             </div>
-            <div>
-              <img className='quit-icons' src='./cross.png' alt='Quit Icon' />
-            </div>
+            <div
+              id='preview'
+              dangerouslySetInnerHTML={{ __html: marked(markdown) }}
+            ></div>
           </div>
-          <div
-            id='preview'
-            dangerouslySetInnerHTML={{ __html: marked(markdown) }}
-          ></div>
-        </div>
+        )}
       </div>
     </div>
   );
 }
 
 export default Previewer;
+
+
 
