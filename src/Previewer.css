@@ -1,24 +1,36 @@
 #container {
     height: auto;
+    width: 71em;
     display: flex;
-    padding: 5px;
+    flex-direction: column;
     justify-content: space-between;
-    background-color: white;
+    background-color: #27374D;
+    align-items: center;
+    gap: 2em;
+    margin: auto;
 }
 
 #editor-container {
-    border: 2px solid black;
-    height: 860px;
-    width: 49.5%;
+    width: 50em;
     overflow: hidden;
+    box-shadow: 5px 5px 10px 5px #0000006f;
+    background-color: #0000006f;
+    
 }
 
 #preview-container {
     border: 2px solid black;
-    height: 860px;
-    width: 49.5%;
-    overflow: scroll;
+    height: 58em;
+    /* overflow: auto;
+    max-height: 1500px; */
+    width: 70em;
     background-color: #9DB2BF;
+    box-shadow: 5px 5px 10px 5px #0000006f;
+}
+
+#preview {
+    height: calc(100% - 43.5px);
+    padding: 25px;
 }
 
 .icons {
@@ -26,19 +38,20 @@
 }
 
 #editor {
-    width: calc(100% - 3.9px);
-    height: calc(100% - 45px);
-    resize: none;
-    border: none;
+    width: calc(100% - 24px);
+    resize: vertical;
+    border: 2px solid black;
     background-color: #9DB2BF;
+    min-height: 20em;
+    padding: 10px;
 }
 
 #editor-top-bar {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
     font-weight: bold;
-    border: none;
-    border-bottom: 2px solid black;
+    border: 2px solid black;
+    border-bottom: none;
     height: 33px;
     display: flex;
     flex-direction: row;
@@ -46,6 +59,7 @@
     align-items: center;
     padding: 3px;
     background-color: #526D82;
+    
     
 }
 
