@@ -1,3 +1,4 @@
+// Previewer.js
 import React, { useState, useEffect } from 'react';
 import { marked } from 'marked';
 import hljs from 'highlight.js';
@@ -5,6 +6,8 @@ import 'highlight.js/styles/github.css';
 import './Previewer.css';
 
 marked.setOptions({
+  gfm: true,       // Enable GitHub flavored markdown
+  breaks: true,    // Convert carriage returns to <br> elements
   highlight: function (code, lang) {
     if (lang && hljs.getLanguage(lang)) {
       return hljs.highlight(code, { language: lang }).value;
@@ -12,14 +15,15 @@ marked.setOptions({
       return hljs.highlightAuto(code).value;
     }
   },
+
 });
 
 function Previewer() {
-  const [markdown, setMarkdown] = useState(`# Welcome to my Markdown Previewer!
+  const [markdown, setMarkdown] = useState(`# React Markdown Previewer
 ---  
-## This is a sub-heading...
+## I made this Markdown Previewer with React...
 ---
-### And here's some other cool stuff:
+### Use it to practice your Markdown:
 
 Heres some code, \`<div></div>\`, between 2 backticks.
 
@@ -103,6 +107,7 @@ And here. | Okay. | I think we get it.
             </div>
             <textarea
               id='editor'
+              className={!showPreview ? 'full-height' : ''}
               value={markdown}
               onChange={handleInputChange}
             ></textarea>
@@ -130,6 +135,9 @@ And here. | Okay. | I think we get it.
 }
 
 export default Previewer;
+
+
+
 
 
 
