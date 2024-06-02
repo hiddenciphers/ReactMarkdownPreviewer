@@ -70,7 +70,7 @@
   
     #editor.full-height {
       flex: 1 1 100%;
-      min-height: 48em;
+      min-height: 91vh;
     }
   }
 
