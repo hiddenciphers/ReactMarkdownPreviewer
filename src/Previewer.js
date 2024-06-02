@@ -36,7 +36,6 @@ const handleInputChange = (event) => {
 \`\`\`
 
 You can also make text **bold**... whoa!
-
 Or _italic_.
 
 Or... wait for it... **_both!_**
@@ -60,7 +59,7 @@ And here. | Okay. | I think we get it.
 
 1. And there are numbered lists too.
 1. Use just 1s if you want!
-1. But the list goes on...
+1. And last but not least, let's not forget embedded images:
 
 ![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)`);
 
