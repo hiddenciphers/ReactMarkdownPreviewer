@@ -66,12 +66,12 @@
       padding: 10px;
       font-size: 14pt;
       resize: vertical;
-      max-height: 91vh;
+      max-height: 90vh;
     }
   
     #editor.full-height {
       flex: 1 1 100%;
-      min-height: 91vh;
+      min-height: 90vh;
     }
   }
 
